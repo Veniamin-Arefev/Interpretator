@@ -1,0 +1,12 @@
+program
+{
+	int int1 = 1, int2 = 5;
+	while (int1 < 5) {
+        while(int2 >2) {
+            write(int2);
+            int2 -=2;
+        }
+        int1+=1;
+        int2 = 5;
+	}
+}

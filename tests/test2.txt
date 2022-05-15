@@ -1,0 +1,14 @@
+program
+{
+	int a = 6;
+	int b = 10;
+	string e = "Hello ", d = "world!";
+	boolean c = true;
+	int r = 5;
+	if (a < b)
+	{
+		write (a * b);
+		write(e, d);
+	}
+	write ( "asd");
+}

@@ -1,0 +1,20 @@
+START -> program { VARS_TYPE START1 }
+VARS_TYPE -> [int | string| bool] VARS < , VARS >;
+VARS -> VAR | VAR = CONSTANT
+
+START1 -> < STATEMENT >
+STATEMENT -> if ( EXPRESSION_OR ) { STATEMENT } else { STATEMENT } | if ( EXPRESSION_OR ) { STATEMENT } | while ( EXPRESSION_OR ) { STATEMENT } | do { STATEMENT } while ( EXPRESSION_OR ); | goto VAR; | VAR: | read ( VAR ); | write ( EXPRESSION_OR < , EXPRESSION_OR > ); | VAR = EXPRESSION_OR; | ;
+
+EXPRESSION_OR -> EXPRESSION_AND < or EXPRESSION_OR >
+EXPRESSION_AND -> EXPRESSION < and EXPRESSION >
+
+EXPRESSION -> EXPRESSION1 < [ == | < | > | <= | >= | != | = | += | -=] EXPRESSION1 >
+
+EXPRESSION1 -> ARITHMETIC1 < [ + | - | or] ARITHMETIC1 >
+ARITHMETIC1 -> ARITHMETIC2 < [ *| / | % | and] ARITHMETIC2 >
+ARITHMETIC2 -> VAR | CONSTANT | not ARITHMETIC2 | (EXPRESSION)
+
+CONSTANT -> [+ | -] NUMBER | "L" | true | false
+VAR -> [a | ... | z] { a | ... | z | 0 | ... | 9 }
+NUMBER -> { 0 | ... | 9 }
+L -> {symbol} , где symbol - любой символ, кроме "

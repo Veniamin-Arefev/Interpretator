@@ -1,0 +1,8 @@
+program
+{
+	int a=10,b=5;
+	string c = "lol );;))kek";
+	a -= 6;
+	write(c);
+	write(a);
+}

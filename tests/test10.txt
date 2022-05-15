@@ -1,0 +1,10 @@
+program
+{
+	string a = "abcd", b = "12345";
+	int c = 15, d = 0;
+	write (a + b);
+	read(d);
+	write(c+d*d-(2*d));
+	read(a);
+	write(a);
+}
